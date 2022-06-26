@@ -1,3 +1,4 @@
 gigaword_2010/*
 !gigaword_2010/test.xml
 .idea/
+__pycache__/

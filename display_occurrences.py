@@ -5,15 +5,20 @@ import dill
 from pprint import pprint
 
 
-def display_occurrences(dir, min_occurrence=1000, max_output=10, pos_list=None):
+def load_dicts(folder):
     complete_dictionary = defaultdict(lambda: defaultdict(int))
 
-    for file in os.listdir(dir):
-        with open(dir + '/' + file, 'rb') as f:
+    for file in os.listdir(folder):
+        with open(folder + '/' + file, 'rb') as f:
             lemmas = dill.load(f)
             for pos in lemmas:
                 for lemma in lemmas[pos]:
                     complete_dictionary[pos][lemma] += lemmas[pos][lemma]
+    return complete_dictionary
+
+
+def display_occurrences(folder, min_occurrence=1000, max_output=10, pos_list=None):
+    complete_dictionary = load_dicts(folder)
 
     for pos in complete_dictionary:
         if len(pos_list) == 0 or pos in pos_list:
