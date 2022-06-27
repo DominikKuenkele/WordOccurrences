@@ -1,0 +1,11 @@
+DET 10
+[(('en', 'one'), 13721086),
+ (('ingen', 'no'), 1492280),
+ (('någon', 'someone'), 637621),
+ (('denna', 'this one'), 431965),
+ (('all', 'all'), 418791),
+ (('samma', 'same'), 260557),
+ (('var', 'where'), 18779),
+ (('varannan', 'every other'), 10428),
+ (('varenda', 'every'), 7520),
+ (('vardera', 'each'), 2214)]
